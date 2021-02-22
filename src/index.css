@@ -1,13 +1,131 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html, body, #root, .whole-page {
+    height: 100%;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+
+
+.container-fluid {
+    height: 100%;
+    padding: 0px 0px;
+}
+
+.row {
+    margin: 5px 0px;
+}
+
+.color-me-white {
+    color: white;
+}
+
+.color-me-grey {
+    color: #2b2a2a;
+}
+
+.background-light-grey {
+    background-color: #515050;
+}
+
+.background-dark-grey {
+    background-color: #2b2a2a;
+}
+
+.background-dark-red {
+    background-color: #990000;
+}
+
+.operation-bar {
+    width: 90%;
+    height: 5%;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.course-tab {
+    background-color: white;
+    padding: 7px;
+    width: auto;
+    border-color: #a6a6a6;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0% 5%;
+}
+
+.add-course-button {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+}
+
+.cards-container {
+    margin: 1% 10%;
+}
+
+.card {
+    width: auto;
+    margin: 2% 1%;
+}
+
+.fixed-navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    top: 0;
+    height: 80px;
+}
+
+.main-page {
+    padding-top: 56px;
+    height: 100%;
+}
+
+.content-page {
+    height: 100%;
+    margin: 80px 0px 20px;
+}
+
+.bd-sidebar {
+    overflow-y: auto;
+    height: 100%;
+    padding-bottom: 2.5rem;
+}
+
+.module-tab {
+    background-color: #4d4d4d;
+    color: white;
+    margin: 5px;
+}
+
+.topic-pill {
+    background-color: #4d4d4d;
+    color: white;
+    margin: 8px;
+}
+
+.content-padding {
+    padding: 15px 10px;
+}
+
+.add-module-button {
+    position: fixed;
+    bottom: 2%;
+    left: 18%;
+}
+
