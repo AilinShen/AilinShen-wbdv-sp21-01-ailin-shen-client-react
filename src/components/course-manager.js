@@ -2,7 +2,7 @@ import React from 'react'
 import CourseService from "../services/course-service"
 import CourseTable from "./course-table";
 import CourseGrid from "./course-grid";
-import {Route} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 
 export default class CourseManager extends React.Component {
 
@@ -93,13 +93,18 @@ export default class CourseManager extends React.Component {
                     </div>
                 </nav>
 
-                <Route path={"/courses/table"}>
-                    <CourseTable courses={this.state.courses} onDelete={this.onDelete} onSave={this.onSave}/>
-                </Route>
+                <Switch>
+                    <Route path={"/courses/table"}>
+                        <CourseTable courses={this.state.courses} onDelete={this.onDelete} onSave={this.onSave}/>
+                    </Route>
+                    <Route path={"/courses/grid"}>
+                        <CourseGrid courses={this.state.courses} onDelete={this.onDelete} onSave={this.onSave}/>
+                    </Route>
+                    <Route path={"/courses"}>
+                        <CourseTable courses={this.state.courses} onDelete={this.onDelete} onSave={this.onSave}/>
+                    </Route>
+                </Switch>
 
-                <Route path={"/courses/grid"}>
-                    <CourseGrid courses={this.state.courses} onDelete={this.onDelete} onSave={this.onSave}/>
-                </Route>
 
 
                 <button type="button"
