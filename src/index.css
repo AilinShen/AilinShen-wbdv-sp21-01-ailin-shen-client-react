@@ -51,11 +51,21 @@ html, body, #root, .whole-page {
 
 .operation-bar {
     width: 90%;
-    height: 5%;
+    height: 45px;
     font-size: 18px;
     font-weight: bold;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+.operation-bar-text{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+hr{
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 .course-tab {

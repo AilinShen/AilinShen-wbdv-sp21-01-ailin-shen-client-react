@@ -12,13 +12,13 @@ export default class CourseTable extends React.Component {
         return (
             <div className="container-fluid content-page">
                 <div className="row operation-bar">
-                    <div className="col-10 col-md-6">
+                    <div className="col-10 col-md-6 operation-bar-text">
                         Title
                     </div>
-                    <div className="col-md-3 col-lg-2 d-none d-md-block d-lg-block d-xl-block">
+                    <div className="col-md-3 col-lg-2 d-none d-md-block d-lg-block d-xl-block operation-bar-text">
                         Owned by
                     </div>
-                    <div className="col-3 d-none d-lg-block d-xl-block">
+                    <div className="col-3 d-none d-lg-block d-xl-block operation-bar-text">
                         Last modified
                     </div>
                     <div className="col-2 col-md-3 col-lg-1 float-right">
