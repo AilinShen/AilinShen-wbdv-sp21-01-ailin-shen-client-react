@@ -3,7 +3,7 @@ function CourseService() {
     this.findAllCourses = findAllCourses;
     this.findCourseById = findCourseById;
     this.deleteCourse = deleteCourse;
-    this.updateUser = updateCourse;
+    this.updateCourse = updateCourse;
     this.url = 'https://wbdv-generic-server.herokuapp.com/api/001302872/courses';
     const self = this;
 
@@ -28,8 +28,8 @@ function CourseService() {
     }
 
     function findCourseById(id) {
-        return fetch(`${self.url}/${id}`).
-        then(function (res) {
+        return fetch(`${self.url}/${id}`)
+            .then(function (res) {
             return res.json()
         })
     }
@@ -54,3 +54,5 @@ function CourseService() {
             })
     }
 }
+
+export default CourseService
