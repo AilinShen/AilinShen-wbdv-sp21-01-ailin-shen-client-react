@@ -7,7 +7,7 @@ function CourseRow ({course, onDelete, onSave}) {
 
     return(
              <div className=" row course-tab">
-                <div className="col-10 col-md-6">
+                <div className="col-9 col-md-6">
                     {
                         !editing &&
                         <Link to="/editor" className="btn">
@@ -46,21 +46,24 @@ function CourseRow ({course, onDelete, onSave}) {
                 }
                 {
                     editing &&
-                    <div className="col-2 col-md-3 col-lg-1" >
-                        <a className="float-right color-me-grey"
-                           onClick={() => {
-                               onSave({...course, title: newTitle})
-                               setEditing(!editing)
-                           } }>
+                    <div className="col-3 col-md-3 col-lg-1" >
+                        <span className="float-right">
+                            <a className=" color-me-grey"
+                               onClick={() => {
+                                   onSave({...course, title: newTitle})
+                                   setEditing(!editing)
+                               } }>
                             <i className="fas fa-check"></i>
                         </a>
-                        <a className="float-right color-me-grey"
-                           onClick={() => {
-                               onDelete(course._id)
-                               setEditing(!editing)
-                           }}>
-                            <i className="fas fa-times"></i>
-                        </a>
+                            <a className=" color-me-grey"
+                               onClick={() => {
+                                   onDelete(course._id)
+                                   setEditing(!editing)
+                               }}>
+                                <i className="fas fa-times"></i>
+                            </a>
+                        </span>
+
                     </div>
                 }
 
