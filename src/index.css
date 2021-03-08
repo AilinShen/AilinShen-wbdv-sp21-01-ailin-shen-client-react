@@ -15,10 +15,7 @@ code {
 html, body, #root, .whole-page {
     height: 100%;
     width: 100%;
-    background-color: #f2f2f2;
 }
-
-
 
 .container-fluid {
     height: 100%;
@@ -117,10 +114,16 @@ hr{
     padding-bottom: 2.5rem;
 }
 
+/*.module-tab {*/
+/*    !*background-color: #4d4d4d;*!*/
+/*    !*color: white;*!*/
+/*    !*margin: 5px;*!*/
+/*    !*height: 60px;*!*/
+/*    !*padding: 15px 0px 15px 10px;*!*/
+/*    !*border: black;*!*/
+/*}*/
 .module-tab {
-    background-color: #4d4d4d;
-    color: white;
-    margin: 5px;
+    height: 70px;
 }
 
 .topic-pill {
@@ -137,5 +140,30 @@ hr{
     position: fixed;
     bottom: 2%;
     left: 18%;
+    border: black;
 }
 
+.nav-pills > li > a.active {
+    background-color: #4a4242 !important;
+}
+
+.nav-pills > li > a.active > a {
+    color: white;
+}
+
+.nav-pills > li > a.active > span > a {
+    color: white;
+}
+
+.list-group > li.active {
+    background-color: grey!important;
+}
+
+a.nav-link {
+    margin: 0 7px;
+    padding: 4px 4px;
+}
+
+a.nav-link > input {
+    width: 60%;
+}
