@@ -1,7 +1,7 @@
 import CourseCard from "./course-card";
 import {Link} from "react-router-dom";
 
-function CourseGrid({courses, onDelete, onSave}) {
+function CourseGrid({courses, onDelete, onSave, onAdd}) {
     return (
         <div className="container-fluid content-page">
             <div className=" operation-bar">
@@ -27,6 +27,13 @@ function CourseGrid({courses, onDelete, onSave}) {
                 }
 
             </div>
+
+            <button type="button"
+                    className="btn add-course-button rounded-circle background-dark-red"
+                    onClick={onAdd}>
+                <i className="fas fa-plus fa-3x color-me-white"></i>
+            </button>
+
         </div>
 
     )

@@ -16,7 +16,7 @@ function CourseCard ({course, onDelete, onSave}) {
                     <p className="card-text">Some example description.</p>
                     {
                         !editing &&
-                        <Link to="/editor" className="btn btn-secondary ">
+                        <Link to={`/courses/grid/edit/${course._id}`} className="btn btn-secondary ">
                             {course.title}
                         </Link>
                     }

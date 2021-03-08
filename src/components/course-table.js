@@ -39,6 +39,12 @@ export default class CourseTable extends React.Component {
                     ))
                 }
 
+                <button type="button"
+                        className="btn add-course-button rounded-circle background-dark-red"
+                        onClick={this.props.onAdd}>
+                    <i className="fas fa-plus fa-3x color-me-white"></i>
+                </button>
+
             </div>
         )
     }

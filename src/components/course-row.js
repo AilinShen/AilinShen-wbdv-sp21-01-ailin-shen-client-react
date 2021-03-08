@@ -6,18 +6,14 @@ function CourseRow ({course, onDelete, onSave}) {
     const [newTitle, setNewTitle] = useState(course.title)
 
     return(
-             <div className=" row course-tab">
+             <div className=" row course-tab"  key={course._id}>
                 <div className="col-9 col-md-6">
                     {
                         !editing &&
-                        <Link to="/editor" className="btn">
+                        <Link to={`/courses/table/edit/${course._id}` } className="btn">
                             <i className="fa fa-file"></i>
                             {course.title}
                         </Link>
-                        // <a href="#" className="text-dark">
-                        //     <i className="fa fa-file"></i>
-
-                        // </a>
                     }
                     {
                         editing &&

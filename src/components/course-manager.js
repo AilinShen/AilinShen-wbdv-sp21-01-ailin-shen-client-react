@@ -3,6 +3,7 @@ import CourseService from "../services/course-service"
 import CourseTable from "./course-table";
 import CourseGrid from "./course-grid";
 import {Route, Switch} from "react-router-dom";
+import CourseEditor from "./course-editor";
 
 export default class CourseManager extends React.Component {
 
@@ -94,24 +95,29 @@ export default class CourseManager extends React.Component {
                 </nav>
 
                 <Switch>
-                    <Route path={"/courses/table"}>
-                        <CourseTable courses={this.state.courses} onDelete={this.onDelete} onSave={this.onSave}/>
+                    <Route path={"/courses/table"} exact={true}>
+                        <CourseTable courses={this.state.courses} onDelete={this.onDelete} onSave={this.onSave} onAdd={this.onAdd}/>
                     </Route>
-                    <Route path={"/courses/grid"}>
-                        <CourseGrid courses={this.state.courses} onDelete={this.onDelete} onSave={this.onSave}/>
+                    <Route path={"/courses/grid"} exact={true}>
+                        <CourseGrid courses={this.state.courses} onDelete={this.onDelete} onSave={this.onSave} onAdd={this.onAdd}/>
                     </Route>
-                    <Route path={"/courses"}>
+                    <Route path={[
+                        "/courses/edit",
+                        "/courses/:layout/edit/:courseId",
+                        "/courses/:layout/edit/:courseId/modules/:moduleId",
+                        "/courses/:layout/edit/:courseId/modules/:moduleId/lessons/:lessonId",
+                        "/courses/:layout/edit/:courseId/modules/:moduleId/lessons/:lessonId/topics/:topicId",
+                    ]} exact={true}
+                           render={(props) => <CourseEditor {...props}/>}>
+                    </Route>
+                    <Route path={"/courses"} exact={true}>
                         <CourseTable courses={this.state.courses} onDelete={this.onDelete} onSave={this.onSave}/>
                     </Route>
                 </Switch>
 
 
 
-                <button type="button"
-                        className="btn add-course-button rounded-circle background-dark-red"
-                        onClick={this.onAdd}>
-                    <i className="fas fa-plus fa-3x color-me-white"></i>
-                </button>
+
             </div>
         );
     }
