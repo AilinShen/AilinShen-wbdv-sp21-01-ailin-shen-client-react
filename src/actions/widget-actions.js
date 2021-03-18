@@ -29,7 +29,7 @@ export const clearWidgets = (dispatch)=>{
 
 export const createWidget = (dispatch, topicId)=>{
     widgetService.createWidget(topicId,
-        {name:"widget1", type:"HEADING", size:1, text:"Widget 1"})
+        {name:"new widget", type:"HEADING", size:1, text:"Widget 1"})
         .then((res)=>{
             dispatch({
                 type: "CREATE_WIDGET",
