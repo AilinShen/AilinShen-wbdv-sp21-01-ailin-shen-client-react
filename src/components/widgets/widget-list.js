@@ -4,6 +4,8 @@ import HeadingWidget from "./heading-widget";
 import ParagraphWidget from "./paragraph-widget";
 import {useParams} from "react-router-dom";
 import widgetActions from "../../actions/widget-actions";
+import ListWidget from "./list-widget";
+import ImageWidget from "./image-widget";
 
 
 function WidgetList({
@@ -50,6 +52,22 @@ function WidgetList({
                             {
                                 widget.type === 'PARAGRAPH' &&
                                 <ParagraphWidget
+                                    widget={widget}
+                                    updateWidget={updateWidget}
+                                    deleteWidget={deleteWidget}
+                                />
+                            }
+                            {
+                                widget.type === 'LIST' &&
+                                <ListWidget
+                                    widget={widget}
+                                    updateWidget={updateWidget}
+                                    deleteWidget={deleteWidget}
+                                />
+                            }
+                            {
+                                widget.type === 'IMAGE' &&
+                                <ImageWidget
                                     widget={widget}
                                     updateWidget={updateWidget}
                                     deleteWidget={deleteWidget}
