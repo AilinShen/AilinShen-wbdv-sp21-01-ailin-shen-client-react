@@ -1,11 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import {connect} from 'react-redux'
-import HeadingWidget from "./heading-widget";
-import ParagraphWidget from "./paragraph-widget";
 import {useParams} from "react-router-dom";
 import widgetActions from "../../actions/widget-actions";
-import ListWidget from "./list-widget";
-import ImageWidget from "./image-widget";
+import EditableWidget from "./editable-widget";
 
 
 function WidgetList({
@@ -40,39 +37,11 @@ function WidgetList({
                 {
                     widgets.map(widget => (
                         <li key={widget.id} className="list-group-item">
+                            <EditableWidget
+                                        widget={widget}
+                                        updateWidget={updateWidget}
+                                        deleteWidget={deleteWidget}/>
 
-                            {
-                                widget.type === 'HEADING' &&
-                                <HeadingWidget
-                                    widget={widget}
-                                    updateWidget={updateWidget}
-                                    deleteWidget={deleteWidget}
-                                />
-                            }
-                            {
-                                widget.type === 'PARAGRAPH' &&
-                                <ParagraphWidget
-                                    widget={widget}
-                                    updateWidget={updateWidget}
-                                    deleteWidget={deleteWidget}
-                                />
-                            }
-                            {
-                                widget.type === 'LIST' &&
-                                <ListWidget
-                                    widget={widget}
-                                    updateWidget={updateWidget}
-                                    deleteWidget={deleteWidget}
-                                />
-                            }
-                            {
-                                widget.type === 'IMAGE' &&
-                                <ImageWidget
-                                    widget={widget}
-                                    updateWidget={updateWidget}
-                                    deleteWidget={deleteWidget}
-                                />
-                            }
                         </li>
                     ))
                 }
