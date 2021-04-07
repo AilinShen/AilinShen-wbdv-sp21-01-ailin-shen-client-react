@@ -7,8 +7,8 @@ function WidgetService() {
     this.updateWidget = updateWidget;
     this.deleteWidget = deleteWidget;
 
-    // this.baseUrl = 'https://wbdv-sp21-01-ailin-shen-server.herokuapp.com/api'
-    this.baseUrl = 'http://localhost:8080/api'
+    this.baseUrl = 'https://wbdv-sp21-01-ailin-shen-server.herokuapp.com/api'
+    // this.baseUrl = 'http://localhost:8080/api'
     const self = this;
 
     function createWidget(topicId, widget){
