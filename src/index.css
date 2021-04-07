@@ -167,3 +167,11 @@ a.nav-link {
 a.nav-link > input {
     width: 60%;
 }
+
+.background-green {
+    background-color: #99ec99;
+}
+
+.background-red {
+    background-color: #e59a90;
+}
