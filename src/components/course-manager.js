@@ -62,7 +62,7 @@ export default class CourseManager extends React.Component {
 
     render() {
         return (
-            <div className="container-fluid">
+            <>
                 <nav className="navbar navbar-expand-lg navbar-dark background-light-grey fixed-navbar">
                     <div className="col-1 dropdown">
                         <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -118,7 +118,7 @@ export default class CourseManager extends React.Component {
 
 
 
-            </div>
+            </>
         );
     }
 

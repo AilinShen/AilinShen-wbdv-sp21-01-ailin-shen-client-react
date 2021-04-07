@@ -35,7 +35,7 @@ export default class CourseTable extends React.Component {
                 <hr className="d-none d-lg-block"/>
                 {
                     this.props.courses.map(course => (
-                        <CourseRow course={course} onDelete={this.props.onDelete} onSave={this.props.onSave}/>
+                        <CourseRow key={course._id} course={course} onDelete={this.props.onDelete} onSave={this.props.onSave}/>
                     ))
                 }
 

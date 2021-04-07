@@ -26,9 +26,14 @@ function CourseRow ({course, onDelete, onSave}) {
                 <div className="col-md-3 col-lg-2 d-none d-md-block d-lg-block d-xl-block">
                     {course.owner}
                 </div>
-                <div className="col-3 d-none d-lg-block d-xl-block">
+                <div className="col-2 d-none d-lg-block d-xl-block">
                     {course.lastModified}
                 </div>
+                 <div className="col-1 d-none d-lg-block d-xl-block">
+                     <Link to={`/courses/${course._id}/quizzes`}>
+                         Quizzes
+                     </Link>
+                 </div>
                 {
                     !editing &&
                     <div className="col-2 col-md-3 col-lg-1" >
