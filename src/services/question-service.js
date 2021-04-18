@@ -1,7 +1,7 @@
 function QuestionService(){
 
     this.findQuestionsForQuiz = findQuestionsForQuiz;
-    this.url = 'http://localhost:4000/api'
+    this.url = 'https://wbdv-sp21-01-ailin-shen-mongo.herokuapp.com/api'
     const self = this;
 
 

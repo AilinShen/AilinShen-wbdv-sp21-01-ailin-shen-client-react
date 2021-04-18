@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function TrueFalseQuestion({question}){
+function TrueFalseQuestion({question, updateAnswers}){
     const [answer, setAnswer] = useState("")
     const [graded, setGraded] = useState(false)
 
@@ -36,6 +36,7 @@ function TrueFalseQuestion({question}){
                             onClick={() => {
                                 setGraded(false)
                                 setAnswer("true")
+                                updateAnswers(question._id, "true")
                             }}
                             name={question._id}/>
                         TRUE
@@ -65,7 +66,8 @@ function TrueFalseQuestion({question}){
                             type="radio"
                             onClick={() => {
                                 setGraded(false)
-                                setAnswer("false")
+                                setAnswer("false");
+                                updateAnswers(question._id, "false")
                             }}
                             name={question._id}/>
                         FALSE

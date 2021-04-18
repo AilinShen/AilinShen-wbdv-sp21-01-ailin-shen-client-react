@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 
-function MultipleChoiceQuestion({question}){
+function MultipleChoiceQuestion({question, updateAnswers}){
 
     const choiceLength = question.choices.length
     const [answer, setAnswer] = useState("")
@@ -41,6 +41,7 @@ function MultipleChoiceQuestion({question}){
                                            onClick={() => {
                                                setGraded(false)
                                                setAnswer(choice)
+                                               updateAnswers(question._id, choice)
                                            }}
                                            name={question._id}/>
                                     {choice}
